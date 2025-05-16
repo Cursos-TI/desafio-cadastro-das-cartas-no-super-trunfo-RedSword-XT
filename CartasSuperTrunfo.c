@@ -41,7 +41,7 @@ nome da cidade, população, área, PIB e pontos turísticos.
     printf("Agora digite a população da cidade 1: \n");
     scanf("%li", &pop1);
 
-    printf("Agora digite a área da cidade 1 em km2: \n");
+    printf("Agora digite a área da cidade 1 em km²: \n");
     scanf("%f", &area1);
 
     printf("Agora digite o PIB da cidade 1 em bilhões: \n");
@@ -69,7 +69,7 @@ nome da cidade, população, área, PIB e pontos turísticos.
     printf("Agora digite a população da cidade 2: \n");
     scanf("%li", &pop2);
 
-    printf("Agora digite a área da cidade 2 em km2: \n");
+    printf("Agora digite a área da cidade 2 em km²: \n");
     scanf("%f", &area2);
 
     printf("Agora digite o PIB da cidade 2 em bilhões: \n");
@@ -115,10 +115,10 @@ superPoder2 = pop2
     printf("Código: %c%d\n", estado1, codigo1);
     printf("Nome da Cidade: %s\n", nome1);
     printf("População: %li\n", pop1);
-    printf("Área: %.2f km2\n", area1);
+    printf("Área: %.2f km²\n", area1);
     printf("PIB: R$ %.2f bilhões\n", pib1);
     printf("Pontos Turísticos: %i\n", pontos1);
-    printf("Densidade Populacional: %.2f hab/km2\n", dens1);
+    printf("Densidade Populacional: %.2f hab/km²\n", dens1);
     printf("PIB per capita: %.2f bilhões/hab\n", percapita1);
     printf("Super Poder: %.2f\n", superPoder1);
     
@@ -128,15 +128,57 @@ superPoder2 = pop2
     printf("Código: %c%d\n", estado2, codigo2);
     printf("Nome da Cidade: %s\n", nome2);
     printf("População: %li\n", pop2);
-    printf("Área: %.2f km2\n", area2);
+    printf("Área: %.2f km²\n", area2);
     printf("PIB: R$ %.2f bilhões\n", pib2);
     printf("Pontos Turísticos: %i\n", pontos2);
-    printf("Densidade Populacional: %.2f hab/km2\n", dens2);
+    printf("Densidade Populacional: %.2f hab/km²\n", dens2);
     printf("PIB per capita: %.2f bilhões/hab\n", percapita2);
-    printf("Super Poder: %.2f\n", superPoder2);
+    printf("Super Poder: %.2f\n\n\n", superPoder2);
 
 
 //A quarta parte do código é a comparação entre as cartas e exibição do resultado.
+//Adicionada a comparação utilizando if e else, e entre parênteses o parâmetro vencedor.
+
+    printf("O vencedor da rodada em cada atributo foi: \n");
+
+    printf("População: ");
+        if (pop1 > pop2) {
+            printf("Carta 1 (%lu habitantes)\n", pop1);}
+        else { printf("Carta 2 (%lu habitantes)\n", pop2);
+        }
+    printf("Área: ");
+        if (area1 > area2) {
+            printf("Carta 1 (%.2f km²)\n", area1);}
+        else { printf("Carta 2 (%.2f km²)\n", area2);
+        }
+    printf("PIB: ");
+        if (pib1 > pib2) {
+            printf("Carta 1 (R$ %.2f bilhões)\n", pib1);}
+        else {printf("Carta 2 (R$ %.2f bilhões)\n", pib2);
+        }
+    printf("Pontos Turísticos: ");
+        if (pontos1 > pontos2) {
+            printf("Carta 1 (%i pontos)\n", pontos1);}
+        else { printf("Carta 2 (%i pontos)\n", pontos2);
+        }
+    printf("Densidade Populacional: ");
+        if (dens1 < dens2) {
+            printf("Carta 1 (%.2f hab/km²)\n", dens1);}
+        else { printf("Carta 2 (%.2f hab/km²)\n", dens2);
+        }
+    printf("PIB per Capita: ");
+        if (percapita1 > percapita2) {
+            printf("Carta 1 (R$ %.2f/hab)\n", percapita1);}
+        else { printf("Carta 2 (R$ %.2f/hab)\n", percapita2);
+        }
+    printf("Super Poder: ");
+        if (superPoder1 > superPoder2) {
+            printf("Carta 1 (%.2f)\n", superPoder1);}
+        else { printf("Carta 2 (%.2f)\n", superPoder2);
+        }
+
+/*
+//Comparação simples (não utilizada após a adição de if e else)
     printf("\n*** Comparação das Cartas: ***\n");
     printf("População: Carta 1 venceu (%i)\n", pop1 > pop2);
     printf("Área: Carta 1 venceu (%i)\n", area1 > area2);
@@ -145,6 +187,6 @@ superPoder2 = pop2
     printf("Densidade Populacional: Carta 2 venceu (%i)\n", dens1 < dens2);
     printf("PIB per Capita: Carta 1 venceu (%i)\n", percapita1 > percapita2);
     printf("Super Poder: Carta 1 venceu (%i)\n", superPoder1 > superPoder2);
-
+*/
 return 0;
 }
